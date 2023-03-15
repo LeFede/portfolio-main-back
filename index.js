@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const express = require("express");
 const app = express();
 
-const string = `mongodb+srv://fede:fedefede@cluster9.lua1z.mongodb.net/portfolio?retryWrites=true&w=majority`;
+const string = `mongodb+srv://fede:${process.env.pass}@cluster9.lua1z.mongodb.net/portfolio?retryWrites=true&w=majority`;
 mongoose.connect(string).then(() => {});
 
 const domElement = mongoose.Schema(
